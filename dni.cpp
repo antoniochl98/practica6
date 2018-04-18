@@ -48,4 +48,5 @@ int contador=0;
   ostream& operator<<(ostream& os,Dni a){
 	  os<<a.write(os);
 	  return os;
+	  
   }
