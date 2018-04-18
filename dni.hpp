@@ -22,4 +22,5 @@ public:
   operator unsigned long();
   friend ostream& operator<<(ostream& os,Dni a);
   ostream& write(ostream& os);
+  
 };
