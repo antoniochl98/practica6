@@ -141,6 +141,7 @@ int main (void){
 				cout<<endl;
 			}
 		}
+		
 	}
 
 	cout<<"adiós"<<endl;
