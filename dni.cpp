@@ -2,6 +2,7 @@
 #include<iostream>
 using namespace std;
 int contador=0;
+float const_reduc;
 //variable global para las comparaciones
 //rand() te genera un entero, como las claves DNI son numeros de 8 digitos , usamos unsigned long, que almacena numeros positivos muy grandes
 //conviene tener un operador de conversion para poder transformar en unsigned long para cuando quieras transformar en unsigned long desde otra clase, por ejemplo, al hacer unsigned long = Dni b
@@ -48,5 +49,4 @@ int contador=0;
   ostream& operator<<(ostream& os,Dni a){
 	  os<<a.write(os);
 	  return os;
-	  
   }

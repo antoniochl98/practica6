@@ -3,26 +3,28 @@
 #include <vector>
 #include "dni.hpp"
 #include "funciones_ordenacion.cpp"
-#define N_METHOD 4
+#define N_METHOD 5
 
 using namespace std;
 
 
-const string METHOD[N_METHOD]={"insertar", "burbuja", "heapSort", "Quicksort" };
+const string METHOD[N_METHOD]={"insertar", "burbuja", "heapSort", "Quicksort","shellsort" };
 
 typedef void (*opera_ptr)(vector <Dni>& ,bool);
 
 int main (void){
 	extern int contador;
+	extern float const_reduc;
 	srand(time(NULL));
 	bool verbose=true;
-	int opcion,const_reduc,N,nPruebas=1;
+	int opcion,N,nPruebas=1;
 	opera_ptr opera_array[N_METHOD];
 
 	opera_array[0]=insertar<Dni>;
 	opera_array[1]=burbuja<Dni>;
 	opera_array[2]=heapSort<Dni>;
 	opera_array[3]=Quicksort<Dni>;
+	opera_array[4]=shell<Dni>;
 
 
 
@@ -141,7 +143,6 @@ int main (void){
 				cout<<endl;
 			}
 		}
-		
 	}
 
 	cout<<"adiós"<<endl;
