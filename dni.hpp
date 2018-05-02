@@ -16,6 +16,7 @@ private:
 public:
   Dni();
   Dni(bool);
+  Dni(int,char);
   ~Dni();
   friend bool operator==(Dni a,Dni b);
   friend bool operator<(Dni a, Dni b);
